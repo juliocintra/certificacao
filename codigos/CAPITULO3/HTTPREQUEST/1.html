@@ -1,0 +1,45 @@
+<script>
+    $("document").ready(function () {
+        /* XML */
+        $("#btnGetXMLData").click(function () {
+            var XMLHTTPReadyState_COMPLETE = 4;
+            var xReq = new XMLHttpRequest();
+            xReq.open("GET", "myXMLData.xml", true);
+            xReq.timeout = 2000;
+            xReq.ontimeout = function () {
+                $("#results").text("Request Timed out");
+            }
+            xReq.onreadystatechange = function (e) {
+                if (xReq.readyState == XMLHTTPReadyState_COMPLETE) {
+                    if (xReq.status = "200") {
+                        $("#results").text(xReq.response);
+                    } else {
+                        $("#results").text(xReq.statusText);
+                    }
+                }
+            }
+            xReq.send(null);
+
+        });
+
+        /* JSON */
+        var XMLHTTPReadyState_COMPLETE = 4;
+        var xReq = new XMLHttpRequest();
+        xReq.open("GET", "myJSONData.json", true);
+        xReq.timeout = 2000;
+        xReq.ontimeout = function () {
+            $("#results").text("Request Timed out");
+        }
+        xReq.onreadystatechange = function (e) {
+            if (xReq.readyState == XMLHTTPReadyState_COMPLETE) {
+                if (xReq.status = "200") {
+                    $("#results").text(xReq.response);
+                } else {
+                    $("#results").text(xReq.statusText);
+                }
+            }
+        }
+        xReq.send(null);
+
+    });
+</script>

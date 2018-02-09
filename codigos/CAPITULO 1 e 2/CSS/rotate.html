@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #orange1 {
+            height: 150px;
+            width: 225px;
+            border: solid 1px;
+            background-color: red;
+        }
+
+        #orange2 {
+            height: 150px;
+            width: 225px;
+            border: solid 1px;
+            background-color: green;
+        }
+
+        #orange3 {
+            height: 150px;
+            width: 225px;
+            border: solid 1px;
+            background-color: blue;
+        }
+
+        #orange4 {
+            height: 150px;
+            width: 225px;
+            border: solid 1px;
+            background-color: orange;
+        }
+
+        .trans {
+            transform: translate(10px, 0px);
+        }
+
+        .trans2 {
+            transform: skew(10deg, 10deg);
+        }
+
+        .trans3 {
+            transform: scale(1.5);
+        }
+
+        .trans4 {
+            transform: translate(50px, 0px) scale(1,5) skew(10deg, 10deg);
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            document.getElementById("orange1").onclick = function () {
+                this.classList.add("trans");
+            }
+            document.getElementById("orange2").onclick = function () {
+                this.classList.add("trans2");
+            }
+            document.getElementById("orange3").onclick = function () {
+                this.classList.add("trans3");
+            }
+            document.getElementById("orange4").onclick = function () {
+                this.classList.add("trans4");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="orange1" style="position: relative"> </div>
+    <div id="orange2" style="position: relative"> </div>
+    <div id="orange3" style="position: relative"> </div>
+    <div id="orange4" style="position: absolute"> </div>
+</body>
+
+</html>

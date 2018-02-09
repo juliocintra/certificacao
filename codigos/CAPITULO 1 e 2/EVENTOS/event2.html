@@ -1,0 +1,16 @@
+<style>
+</style>
+<script>
+    window.onload = function () {
+        document.getElementById("aRange").addEventListener("change", rangeChangeEvent);
+    }
+    function rangeChangeEvent() {
+        document.getElementById("rangeValue").innerText = this.value;
+        console.log(this);
+    }
+</script>
+<body id="bod">
+    <input id="aRange" type="range" max="200" min="0" value="0" />
+    <div id="rangeValue"></div>
+</body>
+

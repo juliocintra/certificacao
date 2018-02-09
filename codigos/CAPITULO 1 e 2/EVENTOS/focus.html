@@ -1,0 +1,30 @@
+<style>
+
+    div {
+        width: 50px;
+        height: 50px;
+        border: solid 1px;
+        background-color: yellow;
+    }
+
+</style>
+<script>
+    window.onload = function () {
+        document.getElementById("yellowBox").addEventListener("click", yellowBoxClick);
+    }
+    function yellowBoxClick() {
+        document.write("Client X: " + window.event.clientX + " ClientY: "
+            + window.event.clientY);
+        document.write("<BR />");
+        document.write("offsetX: " + window.event.offsetX + " offsetY: "
+            + window.event.offsetY);
+        document.write("<BR />");
+        document.write("screen X: " + window.event.screenX + " screenY: "
+            + window.event.screenY);
+    }
+</script>
+
+<body id="bod">
+   <!-- <input id="firstNameText" type="text" value="" /> -->
+    <div id="yellowBox"></div>
+</body>

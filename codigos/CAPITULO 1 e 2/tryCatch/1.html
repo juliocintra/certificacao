@@ -1,0 +1,19 @@
+<style>
+</style>
+<script>
+    window.onload = function () {
+        WillCallBackWhenDone(MyCallBack, 3, 3);
+    }
+    function WillCallBackWhenDone(f, a, b) {
+        var r = a * b;
+        f(r);
+    }
+    function MyCallBack(result) {
+        alert(result);
+    }
+</script>
+
+
+<body>
+    <input type="text" title="Only .com and .ca are permitted." pattern="^[a-zA-Z0-9\-\.]+\.(com|ca)$" />
+</body>

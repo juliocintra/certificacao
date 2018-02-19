@@ -23,6 +23,7 @@
                 $.ajax({
                     url: searchPath,
                     cache: false,
+                    type: 'GET',
                     dataType: "xml",
                     success: function (data) {
                         $(data).find("fruit").each(
